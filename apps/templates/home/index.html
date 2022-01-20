@@ -3,12 +3,15 @@
 {% block title %} Dashboard {% endblock %} 
 
 <!-- Specific Page CSS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/static/assets/css/mk_charts.css">
+{% endblock stylesheets %}
 
 
 {% block content %}
 			
-	<div class="content">
+<div class="content">
 		<div class="panel-header bg-primary-gradient">
 			<div class="page-inner py-5">
 				<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
@@ -25,9 +28,7 @@
 						<div class="card-body">
 							<div class="card-title">Credit Score</div>
 							<div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
-								<div class="mkCharts" data-percent="35">
-									
-								</div>
+								<div class="mkCharts" data-percent="689" data-stroke="4"></div>
 							</div>
 						</div>
 					</div>
@@ -35,22 +36,23 @@
 				<div class="col-md-6">
 					<div class="card full-height">
 						<div class="card-body">
-							<div class="card-title">Total income & spend statistics</div>
+							<div class="card-title">Monthly income & spend statistics</div>
 							<div class="row py-3">
 								<div class="col-md-4 d-flex flex-column justify-content-around">
 									<div>
 										<h6 class="fw-bold text-uppercase text-success op-8">Total Income</h6>
-										<h3 class="fw-bold">$9.782</h3>
+										<h3 class="fw-bold">RM9.782</h3>
 									</div>
 									<div>
 										<h6 class="fw-bold text-uppercase text-danger op-8">Total Spend</h6>
-										<h3 class="fw-bold">$1,248</h3>
+										<h3 class="fw-bold">RM1,248</h3>
 									</div>
 								</div>
 								<div class="col-md-8">
 									<div id="chart-container">
 										<canvas id="totalIncomeChart"></canvas>
 									</div>
+\
 								</div>
 							</div>
 						</div>
@@ -90,7 +92,7 @@
 				<div class="col-md-4">
 					<div class="card card-primary">
 						<div class="card-header">
-							<div class="card-title">Payments</div>
+							<div class="card-title">********</div>
 							<div class="card-category">Nov 25 - Dec 02</div>
 						</div>
 						<div class="card-body pb-0">
@@ -104,9 +106,9 @@
 					</div>
 					<div class="card">
 						<div class="card-body pb-0">
-							<div class="h1 fw-bold float-right text-warning">+7%</div>
-							<h2 class="mb-2">25</h2>
-							<p class="text-muted">Rate of inquiries</p>
+							<div class="h1 fw-bold float-right text-warning">-20%</div>
+							<h2 class="mb-2">12</h2>
+							<p class="text-muted">No. of Inquiries</p>
 							<div class="pull-in sparkline-fix">
 								<div id="lineChart"></div>
 							</div>
@@ -114,37 +116,38 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="row">
 				<div class="col-md-6">
 					<div class="card full-height">
 						<div class="card-header">
-							<div class="card-title">Feed Activity</div>
+							<div class="card-title">Payments</div>
 						</div>
 						<div class="card-body">
 							<ol class="activity-feed">
-								<li class="feed-item feed-item-info">
-									<time class="date" datetime="9-25">Sep 25</time>
-									<span class="text">Due soon</span>
+								<li class="feed-item feed-item-secondary">
+									<time class="date" datetime="9-25">Apr 25</time>
+									<span class="text">Payment due in <a href="#">"5 days"</a></span>
 								</li>
 								<li class="feed-item feed-item-success">
-									<time class="date" datetime="9-24">Sep 24</time>
-									<span class="text">Made Payment on time</span>
+									<time class="date" datetime="9-24">Mar 24</time>
+									<span class="text">Paid on time</span>
 								</li>
 								<li class="feed-item feed-item-success">
-									<time class="date" datetime="9-23">Sep 23</time>
-									<span class="text">Made Payment on time</span>
+									<time class="date" datetime="9-23">Feb 23</time>
+									<span class="text">Paid on time</span>
+								</li>
+								<li class="feed-item feed-item-success">
+									<time class="date" datetime="9-21">Jan 21</time>
+									<span class="text">Paid on time</span>
 								</li>
 								<li class="feed-item feed-item-danger">
-									<time class="date" datetime="9-21">Sep 21</time>
-									<span class="text">Delayed by <a href="#">"3 days"</a></span>
-								</li>
-								<li class="feed-item feed-item-success">
-									<time class="date" datetime="9-18">Sep 18</time>
-									<span class="text">Made Payment on time</span>
+									<time class="date" datetime="9-18">Nov 18</time>
+									<span class="text">Late by <a href="single-event.php">"3 days"</a></span>
 								</li>
 								<li class="feed-item feed-item-success">
 									<time class="date" datetime="9-17">Sep 17</time>
-									<span class="text">Made Payment on time</span>
+									<span class="text">Paid on time</span>
 								</li>
 							</ol>
 						</div>
@@ -154,7 +157,7 @@
 					<div class="card full-height">
 						<div class="card-header">
 							<div class="card-head-row">
-								<div class="card-title">Customer Service</div>
+								<div class="card-title">Support Tickets</div>
 								<div class="card-tools">
 									<ul class="nav nav-pills nav-secondary nav-pills-no-bd nav-sm" id="pills-tab" role="tablist">
 										<li class="nav-item">
@@ -246,6 +249,7 @@
 
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
+	<script src="/static/assets/js/mk_charts.js"></script>
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="/static/assets/js/setting-demo.js"></script>
