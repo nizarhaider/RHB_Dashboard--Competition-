@@ -6,7 +6,7 @@
 > Features
 
 - `Credit Score prediction`
-- `Personalized Credit Advisor'
+- `Personalized Credit Advisor`
 - `Model Explainability`
 
 
