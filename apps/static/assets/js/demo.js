@@ -54,48 +54,55 @@ $('#map-example').vectorMap(
 //Chart
 
 var ctx = document.getElementById('statisticsChart').getContext('2d');
+var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+var gradientFill = ctx.createLinearGradient(0, 100, 0, 400);
+gradientFill.addColorStop(0, "rgba(23, 125, 255, 0.7)");
+gradientFill.addColorStop(1, "rgba(128, 182, 244, 0.3)");
+gradientStroke.addColorStop(0, "#35cd3a");
+gradientStroke.addColorStop(1, "#f3545d");
 
 var statisticsChart = new Chart(ctx, {
 	type: 'line',
 	data: {
 		labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 		datasets: [ {
-			label: "Subscribers",
-			borderColor: '#f3545d',
-			pointBackgroundColor: 'rgba(243, 84, 93, 0.6)',
-			pointRadius: 0,
-			backgroundColor: 'rgba(243, 84, 93, 0.4)',
-			legendColor: '#f3545d',
+			label: "Credit",
+//			borderColor: '#f3545d',
+			borderColor:               gradientStroke,
+            pointBorderColor:          gradientStroke,
+            pointBackgroundColor:      gradientStroke,
+            pointHoverBackgroundColor: gradientStroke,
+            pointHoverBorderColor:     gradientStroke,
+//			pointBackgroundColor: 'rgba(243, 84, 93, 0.6)',
+			pointRadius: 2,
+			backgroundColor: gradientFill,
+//			legendColor: '#36a3f7',
 			fill: true,
-			borderWidth: 2,
-			data: [154, 184, 175, 203, 210, 231, 240, 278, 252, 312, 320, 374]
+			borderWidth: 3,
+			data: [400, 412, 380, 360, 460, 480, 500, 530, 550, 600]
 		}, {
-			label: "New Visitors",
-			borderColor: '#fdaf4b',
-			pointBackgroundColor: 'rgba(253, 175, 75, 0.6)',
-			pointRadius: 0,
-			backgroundColor: 'rgba(253, 175, 75, 0.4)',
-			legendColor: '#fdaf4b',
+			label: "Prediction",
+			borderDash:[10,10],
+//			borderColor: '#fdaf4b',
+			borderColor:               gradientStroke,
+            pointBorderColor:          gradientStroke,
+            pointBackgroundColor:      gradientStroke,
+            pointHoverBackgroundColor: gradientStroke,
+            pointHoverBorderColor:     gradientStroke,
+//			pointBackgroundColor: 'rgba(253, 175, 75, 0.6)',
+			pointRadius: 3,
+			backgroundColor: 'rgba(54,163,247, 0.4)',
+//			legendColor: '#36a3f7',
 			fill: true,
 			borderWidth: 2,
-			data: [256, 230, 245, 287, 240, 250, 230, 295, 331, 431, 456, 521]
-		}, {
-			label: "Active Users",
-			borderColor: '#177dff',
-			pointBackgroundColor: 'rgba(23, 125, 255, 0.6)',
-			pointRadius: 0,
-			backgroundColor: 'rgba(23, 125, 255, 0.4)',
-			legendColor: '#177dff',
-			fill: true,
-			borderWidth: 2,
-			data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 900]
+			data: [400, 412, 380, 360, 460, 480, 500, 530, 550, 600, 677, 722]
 		}]
 	},
 	options : {
 		responsive: true, 
 		maintainAspectRatio: false,
 		legend: {
-			display: false
+			display: true
 		},
 		tooltips: {
 			bodySpacing: 4,
