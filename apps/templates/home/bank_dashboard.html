@@ -45,12 +45,8 @@
 						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 							<div>
 								<h2 class="text-white pb-2 fw-bold">Dashboard</h2>
-								<h5 class="text-white op-7 mb-2">Premium Bootstrap 4 Admin Dashboard</h5>
 							</div>
-							<div class="ml-md-auto py-2 py-md-0">
-								<a href="#" class="btn btn-white btn-border btn-round mr-2">Manage</a>
-								<a href="#" class="btn btn-secondary btn-round">Add Customer</a>
-							</div>
+
 						</div>
 					</div>
 				</div>
@@ -87,31 +83,7 @@
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
-										<div class="modal-body">
-											<p class="small">Create a new row using this form, make sure you fill them all</p>
-											<form>
-												<div class="row">
-													<div class="col-sm-12">
-														<div class="form-group form-group-default">
-															<label>Name</label>
-															<input id="addName" type="text" class="form-control" placeholder="fill name">
-														</div>
-													</div>
-													<div class="col-md-6 pr-0">
-														<div class="form-group form-group-default">
-															<label>Position</label>
-															<input id="addPosition" type="text" class="form-control" placeholder="fill position">
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Office</label>
-															<input id="addOffice" type="text" class="form-control" placeholder="fill office">
-														</div>
-													</div>
-												</div>
-											</form>
-										</div>
+										
 										<div class="modal-footer no-bd">
 											<button type="button" id="addRowButton" class="btn btn-primary">Add</button>
 											<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -124,30 +96,30 @@
 												<thead>
 													<tr>
 														<th>Name</th>
-														<th>Position</th>
-														<th>Office</th>
+														<th>Loan Type</th>
+														<th>Score</th>
 														<th style="width: 10%">Action</th>
 													</tr>
 												</thead>
 												<tfoot>
 													<tr>
 														<th>Name</th>
-														<th>Position</th>
-														<th>Office</th>
-														<th>Action</th>
+														<th>Loan Type</th>
+														<th>Score</th>
+														<th style="width: 10%">Action</th>
 													</tr>
 												</tfoot>
 												<tbody>
 													<tr>
 														<td>Tiger Nixon</td>
-														<td>System Architect</td>
-														<td>Edinburgh</td>
+														<td>Auto Loan</td>
+														<td style="color:green">800</td>
 														<td>
 															<div class="form-button-action">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Approve">
 																	<i class="fa fa-edit"></i>
 																</button>
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Reject">
 																	<i class="fa fa-times"></i>
 																</button>
 															</div>
@@ -155,14 +127,14 @@
 													</tr>
 													<tr>
 														<td>Garrett Winters</td>
-														<td>Accountant</td>
-														<td>Tokyo</td>
+														<td>Auto Loan</td>
+														<td style="color:red">455</td>
 														<td>
 															<div class="form-button-action">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Approve">
 																	<i class="fa fa-edit"></i>
 																</button>
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Reject">
 																	<i class="fa fa-times"></i>
 																</button>
 															</div>
@@ -170,14 +142,14 @@
 													</tr>
 													<tr>
 														<td>Ashton Cox</td>
-														<td>Junior Technical Author</td>
-														<td>San Francisco</td>
+														<td>Personal Loan</td>
+														<td style="color:orange">504</td>
 														<td>
 															<div class="form-button-action">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Approve">
 																	<i class="fa fa-edit"></i>
 																</button>
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Reject">
 																	<i class="fa fa-times"></i>
 																</button>
 															</div>
@@ -185,14 +157,14 @@
 													</tr>
 													<tr>
 														<td>Cedric Kelly</td>
-														<td>Senior Javascript Developer</td>
-														<td>Edinburgh</td>
+														<td>Home Loan</td>
+														<td style="color:orange">686</td>
 														<td>
 															<div class="form-button-action">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Approve">
 																	<i class="fa fa-edit"></i>
 																</button>
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Reject">
 																	<i class="fa fa-times"></i>
 																</button>
 															</div>
@@ -200,14 +172,14 @@
 													</tr>
 													<tr>
 														<td>Airi Satou</td>
-														<td>Accountant</td>
-														<td>Tokyo</td>
+														<td>Home Loan</td>
+														<td style="color:green">812</td>
 														<td>
 															<div class="form-button-action">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Approve">
 																	<i class="fa fa-edit"></i>
 																</button>
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Reject">
 																	<i class="fa fa-times"></i>
 																</button>
 															</div>
@@ -215,14 +187,14 @@
 													</tr>
 													<tr>
 														<td>Brielle Williamson</td>
-														<td>Integration Specialist</td>
-														<td>New York</td>
+														<td>Personal Loan</td>
+														<td style="color:red">401</td>
 														<td>
 															<div class="form-button-action">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Approve">
 																	<i class="fa fa-edit"></i>
 																</button>
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Reject">
 																	<i class="fa fa-times"></i>
 																</button>
 															</div>
@@ -230,14 +202,14 @@
 													</tr>
 													<tr>
 														<td>Herrod Chandler</td>
-														<td>Sales Assistant</td>
-														<td>San Francisco</td>
+														<td>Personal Loan</td>
+														<td style="color:red">388</td>
 														<td>
 															<div class="form-button-action">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Approve">
 																	<i class="fa fa-edit"></i>
 																</button>
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Reject">
 																	<i class="fa fa-times"></i>
 																</button>
 															</div>
@@ -245,14 +217,14 @@
 													</tr>
 													<tr>
 														<td>Rhona Davidson</td>
-														<td>Integration Specialist</td>
-														<td>Tokyo</td>
+														<td>Auto Loan</td>
+														<td style="color:green">711</td>
 														<td>
 															<div class="form-button-action">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Approve">
 																	<i class="fa fa-edit"></i>
 																</button>
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Reject">
 																	<i class="fa fa-times"></i>
 																</button>
 															</div>
@@ -260,14 +232,14 @@
 													</tr>
 													<tr>
 														<td>Colleen Hurst</td>
-														<td>Javascript Developer</td>
-														<td>San Francisco</td>
+														<td>Auto Loan</td>
+														<td style="color:green">720</td>
 														<td>
 															<div class="form-button-action">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Approve">
 																	<i class="fa fa-edit"></i>
 																</button>
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Reject">
 																	<i class="fa fa-times"></i>
 																</button>
 															</div>
@@ -275,14 +247,14 @@
 													</tr>
 													<tr>
 														<td>Sonya Frost</td>
-														<td>Software Engineer</td>
-														<td>Edinburgh</td>
+														<td>Home Loan</td>
+														<td style="color:orange">550</td>
 														<td>
 															<div class="form-button-action">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Approve">
 																	<i class="fa fa-edit"></i>
 																</button>
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Reject">
 																	<i class="fa fa-times"></i>
 																</button>
 															</div>
