@@ -24,7 +24,6 @@
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="dark">
 				
-				{% if current_user.is_authenticated %}
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
 						<form class="navbar-left navbar-form nav-search mr-md-3">
@@ -238,10 +237,10 @@
 											<div class="avatar-lg"><img src="/static/assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
 												<h4>
-													{{ current_user.username }}
+													Hagid Chida
 												</h4>
 												<p class="text-muted">
-													{{ current_user.email }}
+													hagidm@gmail.com
 												</p>
 												<a href="#" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
 											</div>
@@ -255,14 +254,13 @@
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#">Account Setting</a>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="{{ url_for('authentication_blueprint.logout') }}">Logout</a>
+										<a class="dropdown-item" href="">Logout</a>
 									</li>
 								</div>
 							</ul>
 						</li>
 					</ul>
 				</div>
-				{% endif %}
 
 			</nav>
 			<!-- End Navbar -->
