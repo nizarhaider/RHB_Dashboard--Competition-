@@ -10,7 +10,69 @@
 
 
 {% block content %}
-			
+<style>
+.score-gauge-container{
+	width: 400px;
+  height: 200px;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  overflow: hidden;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.gauge-a {
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(192,192,192,.2);
+  width: 400px;
+  height: 200px;
+  top: 0%;
+  border-radius: 250px 250px 0px 0px;
+}
+
+.gauge-b {
+  z-index: 3;
+  position: absolute;
+  background-color: #fff;
+  width: 250px;
+  height: 125px;
+  top: 75px;
+  margin-left: 75px;
+  margin-right: auto;
+  border-radius: 250px 250px 0px 0px;
+  display: flex;
+justify-content: center;	
+align-items: flex-end;
+}
+
+#gauge-c {
+  z-index: 2;
+  position: absolute;
+  background-color: #5664F9;
+  width: 400px;
+  height: 200px;
+  top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px 0px 200px 200px;
+  transform-origin: center top;
+  transition: all 1.3s ease-in-out;
+}
+
+.gauge-data {
+  z-index: 4;
+  color: rgba(0,0,0,1);
+  font-size: 1.5em;
+  line-height: 25px;
+  width: 400px;
+  height: 200px;
+  top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 1s ease-out;
+}
+</style>
 <div class="content">
 		<div class="panel-header bg-primary-gradient">
 			<div class="page-inner py-5">
@@ -26,9 +88,13 @@
 				<div class="col-md-6">
 					<div class="card full-height">
 						<div class="card-body">
-							<div class="card-title">Credit Score</div>
-							<div class="d-flex flex-wrap justify-content-around pb-2 pt-4">
-								<div class="mkCharts" data-percent="689" data-stroke="4"></div>
+							<div class="card-title">Spending Score</div>
+							<div class="score-gauge-container">
+								<div class="gauge-a"></div>
+								<div class="gauge-b">
+									<h1 id="percent">0</h1>
+								</div>
+								<div id="gauge-c"></div>
 							</div>
 						</div>
 					</div>
@@ -256,6 +322,21 @@
 	<script src="/static/assets/js/demo.js"></script>
 
 	<script>
+		window.onload = function() {
+		var newVal = Math.floor((Math.random() * 179) + 1);
+		var pVal = Math.floor((newVal / 180) * 100);
+		document.getElementById('gauge-c').setAttribute(
+      "style", "transform: rotate(" + newVal + "deg);");
+		document.getElementById("percent").innerHTML = pVal;
+		if (pVal < 33){
+			document.getElementById('gauge-c').style.backgroundColor = "#f25961"
+		}else if (pVal < 66){
+			document.getElementById('gauge-c').style.backgroundColor = "orange"
+		}else{
+			document.getElementById('gauge-c').style.backgroundColor = "#31ce36"
+		}
+
+	};
 		Circles.create({
 			id:'circles-1',
 			radius:45,
