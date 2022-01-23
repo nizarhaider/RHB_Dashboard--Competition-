@@ -54,7 +54,7 @@ var statisticsChart = new Chart(ctx, {
 	data: {
 		labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
 		datasets: [ {
-			label: "Credit",
+			label: "Score",
 //			borderColor: '#f3545d',
 			borderColor:               gradientStroke,
             pointBorderColor:          gradientStroke,
