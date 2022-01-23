@@ -12,6 +12,8 @@
 {% block content %}
 <style>
 .score-gauge-container{
+	display: flex;
+	justify-content: center;
 	width: 400px;
   height: 200px;
   position: relative;
@@ -25,9 +27,9 @@
   z-index: 1;
   position: absolute;
   background-color: rgba(192,192,192,.2);
-  width: 400px;
-  height: 200px;
-  top: 0%;
+  width: 300px;
+  height: 150px;
+  top: 25%;
   border-radius: 250px 250px 0px 0px;
 }
 
@@ -38,7 +40,6 @@
   width: 250px;
   height: 125px;
   top: 75px;
-  margin-left: 75px;
   margin-right: auto;
   border-radius: 250px 250px 0px 0px;
   display: flex;
@@ -50,8 +51,8 @@ align-items: flex-end;
   z-index: 2;
   position: absolute;
   background-color: #5664F9;
-  width: 400px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
   top: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -130,7 +131,7 @@ align-items: flex-end;
 					<div class="card">
 						<div class="card-header">
 							<div class="card-head-row">
-								<div class="card-title">Credit History</div>
+								<div class="card-title">Score History</div>
 								<div class="card-tools">
 									<a href="#" class="btn btn-info btn-border btn-round btn-sm mr-2">
 										<span class="btn-label">
